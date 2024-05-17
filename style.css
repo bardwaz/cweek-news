@@ -179,25 +179,25 @@ section .imageNews {
     position: sticky;
 }
 
-section #one {
+section #big1 {
     width: 31vw;
     height: 31vw;
     background-image: url("images/sampleimage1.jpg");
 }
 
-section #two {
+section #big2 {
     width: 16vw;
     height: 31vw;
     background-image: url("images/sampleimage5.jpg");
 }
 
-section #three {
+section #big3 {
     width: 15vw;
     height: 14.5vw;
     background-image: url("images/sampleimage3.jpg");
 }
 
-section #four {
+section #big4 {
     width: 15vw;
     height: 14.5vw;
     background-image: url("images/sampleimage4.jpg");
@@ -211,7 +211,7 @@ section a:hover .imageNews {
     filter: brightness(1.1);
 }
 
-section #one:hover {
+section #big1:hover {
     filter: invert(1);
 }
 
@@ -254,6 +254,11 @@ section #one:hover {
     width: 100%;
     color: aliceblue;
     overflow: hidden;
+    display: -webkit-box; 
+    -webkit-box-orient: vertical; 
+    -webkit-line-clamp: 2; 
+    /* white-space: nowrap; */
+    text-overflow: ellipsis;
 }
 
 .imageNews .NewsTitle:hover {
@@ -365,8 +370,13 @@ article .containerDiv .art .titlesmall {
     font-size: 1.1vw;
     padding-left: 0.5vw;
     height: 4.5vw;
-    overflow: hidden;
     color: black;
+    overflow: hidden;
+    display: -webkit-box; 
+    -webkit-box-orient: vertical; 
+    -webkit-line-clamp: 3; 
+    /* white-space: nowrap; */
+    text-overflow: ellipsis;
 }
 
 article .containerDiv .art .titlesmall:hover {
@@ -419,22 +429,22 @@ article .containerDiv a {
         width: 100vw;
     }
 
-    section #one {
+    section #big1 {
         width: 50vw;
         height: 50vw;
     }
 
-    section #two {
+    section #big2 {
         width: 20vw;
         height: 50vw;
     }
 
-    section #three {
+    section #big3 {
         width: 20vw;
         height: 24vw;
     }
 
-    section #four {
+    section #big4 {
         width: 20vw;
         height: 24vw;
     }
