@@ -1,0 +1,464 @@
+* {
+    box-sizing: border-box;
+}
+
+@font-face {
+    src: url(Fonts/SF-Pro-Text-Regular.otf);
+    font-family: apple-font;
+}
+
+@font-face {
+    font-family: NewsFlash;
+    src: url(Fonts/NewsflashBB.ttf);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+.headerDiv {
+    background-image: url("images/noita-digital-zcx5ztIjQAM-unsplash.jpg");
+    background-repeat: no-repeat;
+    background-size: 4000px 100px;
+    height: 100px;
+    width: 100%;
+    position: relative;
+    top: 0px;
+}
+
+.headerDiv p {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    top: 50%;
+    transform: translate(0, -50%);
+    text-indent: 30px;
+    /* color: azure; */
+    color: rgb(253, 249, 243);
+    font-size: 85px;
+    user-select: none;
+    font-family: NewsFlash;
+}
+
+.navbar {
+    background-color: hsl(0, 0%, 100%);
+    height: 50px;
+    width: 100%;
+    padding-left: 40px;
+}
+
+.navbutt {
+    position: relative;
+    padding-right: 15px;
+    padding-left: 15px;
+    float: left;
+    text-align: center;
+    font-size: 18px;
+    height: 50px;
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+}
+
+.navbutt:hover {
+    background-color: black;
+    /* color: white; */
+    color: rgb(247, 240, 231);
+}
+
+.navbutt p {
+    position: relative;
+    user-select: none;
+    margin: 0;
+    padding: 0;
+    top: 50%;
+    transform: translate(0, -50%);
+    font-family: apple-font;
+    font-weight: bold;
+
+}
+
+#navdropdown {
+    width: 70px;
+    float: left;
+    height: 50px;
+}
+
+#navsearch {
+    width: 70px;
+    float: right;
+    height: 50px;
+}
+
+.colachanga:hover {
+    stroke: hsl(0, 0%, 45%);
+
+}
+
+.drop:hover {
+    stroke: white;
+    fill: black;
+}
+
+.breakingNews {
+    background-color: hsl(0, 0%, 92%);
+    height: 42px;
+    width: 100%;
+    padding-left: 30px;
+}
+
+.breakingNews div {
+    position: relative;
+    height: 42px;
+    color: rgb(0, 0, 0);
+}
+
+.breakingNews div p {
+    position: relative;
+    user-select: none;
+    margin: 0;
+    padding: 0;
+    top: 50%;
+    transform: translate(0, -50%);
+    text-align: center;
+    font-family: apple-font;
+}
+
+#breaking {
+    padding-left: 5px;
+    padding-right: 15px;
+    float: left;
+    font-size: 21px;
+}
+
+#local {
+    padding-right: 15px;
+    padding-left: 15px;
+    float: left;
+    font-size: 21px;
+}
+
+#Date {
+    padding-right: 15px;
+    padding-left: 15px;
+    float: right;
+    font-size: 14px;
+}
+
+.breakingNews #breakingimg {
+    width: 36px;
+    float: left;
+    height: 42px;
+}
+
+.breakingNews #weather {
+    width: 36px;
+    float: right;
+    height: 42px;
+}
+
+section {
+    width: 70vw;
+    float: left;
+}
+
+section .imageNews {
+    font-family: apple-font;
+    display: block;
+    float: left;
+    border-radius: 10px;
+    width: 10vw;
+    height: 30vw;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    position: sticky;
+}
+
+section #one {
+    width: 31vw;
+    height: 31vw;
+    background-image: url("images/sampleimage1.jpg");
+}
+
+section #two {
+    width: 16vw;
+    height: 31vw;
+    background-image: url("images/sampleimage5.jpg");
+}
+
+section #three {
+    width: 15vw;
+    height: 14.5vw;
+    background-image: url("images/sampleimage3.jpg");
+}
+
+section #four {
+    width: 15vw;
+    height: 14.5vw;
+    background-image: url("images/sampleimage4.jpg");
+}
+
+section a {
+    text-decoration: none;
+}
+
+section a:hover .imageNews {
+    filter: brightness(1.1);
+}
+
+section #one:hover {
+    filter: invert(1);
+}
+
+.imageNews .proTags {
+    position: absolute;
+    bottom: 8vw;
+    left: 1vw;
+    font-size: 0.9vw;
+    width: auto;
+    padding-top: 0.2vw;
+    padding-bottom: 0.2vw;
+    padding-left: 0.5vw;
+    padding-right: 0.5vw;
+    float: left;
+    text-align: center;
+    display: block;
+    background-color: rgb(0, 0, 0);
+    color: aliceblue;
+    border-radius: 20px;
+}
+
+.imageNews .proTags:hover {
+    background-color: rgb(158, 158, 158);
+    color: black;
+
+}
+
+.imageNews #proT2 {
+    left: 6vw;
+}
+
+.imageNews .NewsTitle {
+    position: absolute;
+    bottom: 3.5vw;
+    text-align: left;
+    padding-left: 1.5vw;
+    padding-right: 1.5vw;
+    font-size: 1.7vw;
+    height: 4vw;
+    width: 100%;
+    color: aliceblue;
+    overflow: hidden;
+}
+
+.imageNews .NewsTitle:hover {
+    text-decoration: underline;
+    font-family: Arial;
+}
+
+.imageNews .auth {
+    position: absolute;
+    text-align: left;
+    bottom: 1.6vw;
+    font-size: 0.9vw;
+    padding-left: 3vw;
+    padding-right: 1vw;
+    float: left;
+    color: aliceblue;
+    width: 6vw;
+}
+
+.imageNews .auth:hover {
+    text-decoration: underline;
+    font-style: italic;
+}
+
+
+.imageNews .datepub {
+    position: absolute;
+    text-align: left;
+    bottom: 1.6vw;
+    left: 5vw;
+    font-size: 0.9vw;
+    padding-left: 2.25vw;
+    padding-right: 2vw;
+    float: left;
+    color: aliceblue;
+}
+
+.imageNews .datepub:hover {
+    /* text-decoration: underline; */
+    /* color: rgb(132, 198, 255); */
+    color: rgb(243, 209, 160);
+}
+
+article {
+    width: 28vw;
+    height: 31vw;
+    float: right;
+    padding: 0;
+    margin: 0;
+}
+
+article .selectors {
+    width: 13vw;
+    height: 3vw;
+    /* background-color: rgb(221, 221, 221); */
+    background-color: hsl(0, 0%, 95%);
+    display: block;
+    float: left;
+    position: relative;
+    text-align: center;
+    font-family: Arial;
+}
+
+article .selectors:hover {
+    background-color: rgb(53, 53, 53);
+    color: antiquewhite;
+    user-select: none;
+}
+
+article .selectors p {
+    position: relative;
+    font-size: 1vw;
+}
+
+article #late {
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+article #pop {
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+article .containerDiv .art .imagesmall {
+    float: left;
+    margin: 0.5vw;
+    width: 6vw;
+    height: 6vw;
+    border-radius: 10px;
+    /* background-color: aqua; */
+    background-image: url("images/sampleimage.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+article .containerDiv .art {
+    width: 28vw;
+    height: 7vw;
+    padding-right: 1vw;
+    display: block;
+    float: left;
+    font-family: monospace;
+}
+
+article .containerDiv .art .titlesmall {
+    padding-top: 0.8vw;
+    font-size: 1.1vw;
+    padding-left: 0.5vw;
+    height: 4.5vw;
+    overflow: hidden;
+    color: black;
+}
+
+article .containerDiv .art .titlesmall:hover {
+    text-decoration: underline;
+    user-select: none;
+}
+
+article .containerDiv .art:hover .imagesmall {
+    filter: brightness(1.13);
+}
+
+article .containerDiv .art .datesmall {
+    height: 3vw;
+    display: block;
+    float: left;
+    padding-left: 0.6vw;
+    padding-top: 0.5vw;
+    font-size: 1vw;
+    color: rgb(112, 112, 112);
+}
+
+article .containerDiv .art .datesmall:hover {
+    color: rgb(179, 134, 75);
+    user-select: none;
+}
+
+article .containerDiv a {
+    text-decoration: none;
+}
+
+@media screen and (max-width:900px) {
+    .navbutt {
+        display: none;
+    }
+}
+
+@media screen and (max-width:600px) {
+    #breaking {
+        display: none;
+    }
+
+}
+
+@media screen and (max-width:800px) {
+    .navbutt {
+        display: none;
+    }
+
+    section {
+        width: 100vw;
+    }
+
+    section #one {
+        width: 50vw;
+        height: 50vw;
+    }
+
+    section #two {
+        width: 20vw;
+        height: 50vw;
+    }
+
+    section #three {
+        width: 20vw;
+        height: 24vw;
+    }
+
+    section #four {
+        width: 20vw;
+        height: 24vw;
+    }
+
+    article {
+        width: 100vw;
+    }
+
+    .headerDiv {
+        height: 70px;
+    }
+
+    .headerDiv p {
+        font-size: 70px;
+    }
+
+    article .containerDiv {
+        float: none;
+        width: 100vw;
+        height: auto;
+        display: block;
+    }
+
+    article .selectors {
+        float: left;
+    }
+}
