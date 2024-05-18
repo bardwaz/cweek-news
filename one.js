@@ -74,8 +74,6 @@ fetch('https://coding-week-2024-api.onrender.com/api/data')
 
                     <div id="content">${data[j].content}</div>
 
-                    <hr style="position: absolute; top: 5vw; height: 7px; width: 100%; background-color: black;">
-
                     <div id="authndate">${data[j].author}<br>${data[j].date}</div>`;
 
                 con.parentElement.style.display = 'block';
@@ -115,8 +113,6 @@ fetch('https://coding-week-2024-api.onrender.com/api/data')
                     <div id="contentimg" style="background-image: url('${data[j].image}')";></div>
 
                     <div id="content">${data[j].content}</div>
-
-                    <hr style="position: absolute; top: 5vw; height: 7px; width: 100%; background-color: black;">
 
                     <div id="authndate">${data[j].author}<br>${data[j].date}</div>`;
 
