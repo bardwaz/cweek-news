@@ -1,15 +1,7 @@
-const getData = async () => {
-
-    const response = await fetch('https://coding-week-2024-api.onrender.com/api/data');
-    const data = await response.json();
-    return data;
-
-};
-
-getData()
+fetch('https://coding-week-2024-api.onrender.com/api/data')
+// fetch('data.json')
+    .then(prom => {return prom.json(); })
     .then(data => {
-
-    console.log(data[2]);
 
     Array.from(data).forEach(hmm => {
 
@@ -49,7 +41,7 @@ getData()
         else{
 
         str+=`<a href="">
-                <div class="art" id="small1">
+                <div class="art" id="small${i+1}">
                     <div class="imagesmall" style="background-image: url('${data[i].image}');"></div>
                     <div style="width: 1vw; height: 2vw; display: block; float: right;"></div>
                     <div class="titlesmall">${data[i].headline}</div>
@@ -65,5 +57,94 @@ getData()
 
     document.querySelector("#test").innerHTML += str;
 
+    let con = document.querySelector('#contentin');
 
+    let arts = document.querySelectorAll('.art');
+
+    let wrp = document.querySelector('#wrap');
+
+    Array.from(arts).forEach(art => {
+
+        art.addEventListener('click', e => {
+            e.preventDefault();
+            console.log(art.id);
+
+            let j=art.id.replace("small","")-1;
+
+            con.innerHTML = `<div id="contentTit">${data[j].headline}</div>
+
+                    <div id="close">x</div>
+
+                    <div id="contentimg" style="background-image: url('${data[j].image}')";></div>
+
+                    <div id="content">${data[j].content}</div>
+
+                    <hr style="position: absolute; top: 5vw; height: 7px; width: 100%; background-color: black;">
+
+                    <div id="authndate">${data[j].author}<br>${data[j].date}</div>`;
+
+            con.parentElement.style.display = 'block';
+            con.parentElement.style.animation = 'blurout';
+            con.parentElement.style.animationDuration = '0.4s';
+            wrp.style.filter = 'blur(12px)';
+
+            document.querySelector('#close').addEventListener('click', f => {
+
+                // location.reload();
+                con.parentElement.style.animation = 'tonone';
+                con.parentElement.style.animationDuration = '0.6s';
+                setTimeout(() => {con.parentElement.style.display = 'none';},500);
+                wrp.style.filter = 'blur(0px)';
+                
+
+            });
+
+
+
+        });
+
+    });
+
+    let imgnews = document.querySelectorAll('.imageNews');
+    Array.from(imgnews).forEach(imgnew => {
+
+        imgnew.addEventListener('click', e => {
+            e.preventDefault();
+            console.log(imgnew);
+
+            let j=imgnew.id.replace("big","")-1;
+
+            con.innerHTML = `<div id="contentTit">${data[j].headline}</div>
+
+                    <div id="close">x</div>
+
+                    <div id="contentimg" style="background-image: url('${data[j].image}')";></div>
+
+                    <div id="content">${data[j].content}</div>
+
+                    <hr style="position: absolute; top: 5vw; height: 7px; width: 100%; background-color: black;">
+
+                    <div id="authndate">${data[j].author}<br>${data[j].date}</div>`;
+
+                    con.parentElement.style.display = 'block';
+                    con.parentElement.style.animation = 'blurout';
+                    con.parentElement.style.animationDuration = '0.4s';
+                    wrp.style.filter = 'blur(12px)';
+
+                    document.querySelector('#close').addEventListener('click', f => {
+
+                        // location.reload();
+                        con.parentElement.style.animation = 'tonone';
+                        con.parentElement.style.animationDuration = '0.6s';
+                        setTimeout(() => {con.parentElement.style.display = 'none';},500);
+                        wrp.style.filter = 'blur(0px)';
+        
+                    });
+        });
+
+    });
+
+    // document.querySelector('#listener').addEventListener('click', g => {
+    //     console.log(g);
+    // });
 });

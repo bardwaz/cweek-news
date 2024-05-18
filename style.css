@@ -2,6 +2,14 @@
     box-sizing: border-box;
 }
 
+@keyframes tonone{
+    100%{opacity: 0;}
+}
+
+@keyframes blurout{
+    from{filter: blur(1200px);}
+}
+
 @font-face {
     src: url(Fonts/SF-Pro-Text-Regular.otf);
     font-family: apple-font;
@@ -16,23 +24,138 @@ body {
     margin: 0;
     padding: 0;
     overflow-x: hidden;
+    animation-name: blurout;
+    animation-duration: 1.5s;
+}
+
+#wrap {
+    display: fixed;
+    filter: blur(0px);
+    top: 0px;
+    left: 0;
+}
+
+#contentout {
+    display: none;
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    top: 0;
+    left: 0;
+    /* background-color: rgba(255, 255, 255, 0.859); */
+}
+
+#contentin {
+    width: 50vw;
+    height: 25vw;
+    border-radius: 10px;
+    display: block;
+    /* background-color: rgb(223, 222, 222); */
+    background-color: aliceblue;
+    top: 200px;
+    position: absolute;
+    left: 25vw;
+    border-width: 0.3vw;
+    border-style: solid;
+    border-color: black;
+}
+
+#content {
+    display: block;
+    position: absolute;
+    width: 28vw;
+    height: 11.8vw;
+    top: 7.5vw;
+    right: 2vw;
+    overflow-y: auto;
+    font-size: 1.5vw;
+    font-family: Arial;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    padding: 0.5vw;
+}
+
+#authndate {
+    display: block;
+    position: absolute;
+    width: auto;
+    height: 3vw;
+    top: 20vw;
+    right: 2vw;
+    overflow: hidden;
+    font-size: 1.2vw;
+    font-family: monospace;
+    background-color: rgb(255, 255, 255);
+    text-align: right;
+    border-radius: 10px;
+    padding-left: 0.5vw;
+    padding-right: 0.5vw;
+}
+
+#contentimg {
+    display: block;
+    width: 16vw;
+    height: 16vw;
+    border-radius: 15px;
+    background-position: center;
+    background-size: cover;
+    float: left;
+    top: 7vw;
+    position: absolute;
+    left: 2vw;
+}
+
+#close {
+    display: block;
+    position: absolute;
+    top: 1vw;
+    right: 1vw;
+    height: 3vw;
+    width: 6vw;
+    background-color: tomato;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    font-size: 2vw;
+    text-align: center;
+    font-family: apple-font;
+    color: white;
+    user-select: none;
+}
+
+#close:hover{
+    background-color: red;
+}
+
+#contentTit {
+    display: block;
+    position: absolute;
+    top: 0;
+    height: 5vw;
+    width: 44vw;
+    padding-left: 2vw;
+    padding-top: 1vw;
+    font-size: 1.7vw;
+    font-weight: bold;
+    font-family: Arial;
+    text-decoration: underline;
 }
 
 .headerDiv {
     background-image: url("images/noita-digital-zcx5ztIjQAM-unsplash.jpg");
     background-repeat: no-repeat;
     background-size: 4000px 100px;
-    height: 100px;
-    width: 100%;
+    height: 93px;
+    width: 100vw;
     position: relative;
     top: 0px;
+    display: block;
 }
 
 .headerDiv p {
     position: relative;
     margin: 0;
     padding: 0;
-    top: 50%;
+    top: 55%;
     transform: translate(0, -50%);
     text-indent: 30px;
     /* color: azure; */
@@ -62,6 +185,12 @@ body {
 }
 
 .navbutt:hover {
+    background-color: black;
+    /* color: white; */
+    color: rgb(247, 240, 231);
+}
+
+.navbutt:nth-child(1){
     background-color: black;
     /* color: white; */
     color: rgb(247, 240, 231);
@@ -328,6 +457,12 @@ article .selectors:hover {
     user-select: none;
 }
 
+article .active{
+    background-color: rgb(53, 53, 53);
+    color: antiquewhite;
+    user-select: none;
+}
+
 article .selectors p {
     position: relative;
     font-size: 1vw;
@@ -378,7 +513,7 @@ article .containerDiv .art .titlesmall {
     text-overflow: ellipsis;
 }
 
-article .containerDiv .art .titlesmall:hover {
+article .containerDiv .art:hover .titlesmall {
     text-decoration: underline;
     user-select: none;
 }
@@ -405,6 +540,10 @@ article .containerDiv .art .datesmall:hover {
 article .containerDiv a {
     text-decoration: none;
 }
+
+/* article .active{
+
+} */
 
 @media screen and (max-width:900px) {
     .navbutt {
