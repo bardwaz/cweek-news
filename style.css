@@ -145,14 +145,21 @@ body {
     display: block;
     position: absolute;
     top: 0;
-    height: 5vw;
-    width: 44vw;
+    height: 6vw;
+    border-radius: 5px 5px 0px 0px;
+    width: 49.7vw;
     padding-left: 2vw;
     padding-top: 1vw;
     font-size: 1.7vw;
     font-weight: bold;
     font-family: Arial;
     text-decoration: underline;
+    /* background-color: rgb(215, 168, 146); */
+    background-image: url(images/noita-digital-zcx5ztIjQAM-unsplash.jpg);
+    background-repeat: no-repeat;
+    background-size: 100vw 10vw;
+    color: antiquewhite;
+    padding-right: 7.5vw;
 }
 
 .headerDiv {
