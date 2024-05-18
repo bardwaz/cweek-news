@@ -153,4 +153,8 @@ fetch('https://coding-week-2024-api.onrender.com/api/data')
 
         });
 
+        const date = new Date();
+        let today = `${date.getDate()}-${date.getMonth() + 1}-${date.getFullYear()}`;
+        document.querySelector('#Date').innerHTML = `<p>${today}</p>`;
+
     });
