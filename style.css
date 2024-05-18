@@ -189,8 +189,8 @@ body {
 
 .navbutt {
     position: relative;
-    padding-right: 15px;
-    padding-left: 15px;
+    /* padding-right: 15px;
+    padding-left: 15px; */
     float: left;
     text-align: center;
     font-size: 18px;
@@ -205,7 +205,7 @@ body {
     color: rgb(247, 240, 231);
 }
 
-.navbutt:nth-child(1) {
+.navbar .act {
     background-color: black;
     /* color: white; */
     color: rgb(247, 240, 231);
@@ -215,12 +215,17 @@ body {
     position: relative;
     user-select: none;
     margin: 0;
-    padding: 0;
+    /* padding: 0; */
     top: 50%;
     transform: translate(0, -50%);
     font-family: apple-font;
     font-weight: bold;
 
+    display: block;
+    height: 50px;
+    padding-top: 12px;
+    padding-right: 20px;
+    padding-left: 20px;
 }
 
 #navdropdown {
@@ -460,6 +465,8 @@ article .selectors {
     position: relative;
     text-align: center;
     font-family: Arial;
+    font-size: 1vw;
+    padding-top: 1vw;
 }
 
 article .selectors:hover {
@@ -474,10 +481,10 @@ article .active {
     user-select: none;
 }
 
-article .selectors p {
+/* article .selectors {
     position: relative;
     font-size: 1vw;
-}
+} */
 
 article #late {
     border-top-left-radius: 10px;

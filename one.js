@@ -137,4 +137,20 @@ fetch('https://coding-week-2024-api.onrender.com/api/data')
 
         });
 
+        document.querySelector('#listen').addEventListener('click', h => {
+
+            document.querySelector('#listen .act').classList.toggle('act');
+            // console.log(h.target);
+            h.target.classList.toggle('act');
+
+        });
+
+        document.querySelector('#listener').addEventListener('click', k => {
+
+            document.querySelector('#listener .active').classList.toggle('active');
+            // console.log(k.target);
+            k.target.classList.toggle('active');
+
+        });
+
     });
