@@ -571,9 +571,7 @@ article .containerDiv {
         display: none;
     }
 
-    article .selectors {
-        display: none;
-    }
+
 
 }
 
@@ -626,6 +624,6 @@ article .containerDiv {
     }
 
     article .selectors {
-        float: left;
+        display: none;
     }
 }
