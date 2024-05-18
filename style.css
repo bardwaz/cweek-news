@@ -14,6 +14,17 @@
     }
 }
 
+.objimg {
+    display: block;
+    position: absolute;
+
+    object-position: left;
+    left: 1.2vw;
+    bottom: 1.5vw;
+    width: 1.5vw;
+
+}
+
 @font-face {
     src: url(Fonts/SF-Pro-Text-Regular.otf);
     font-family: apple-font;
