@@ -1,6 +1,6 @@
 const getData = async () => {
 
-    const response = await fetch('data.json');
+    const response = await fetch('https://coding-week-2024-api.onrender.com/api/data');
     const data = await response.json();
     return data;
 
