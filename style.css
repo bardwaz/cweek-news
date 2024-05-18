@@ -2,12 +2,16 @@
     box-sizing: border-box;
 }
 
-@keyframes tonone{
-    100%{opacity: 0;}
+@keyframes tonone {
+    100% {
+        opacity: 0;
+    }
 }
 
-@keyframes blurout{
-    from{filter: blur(1200px);}
+@keyframes blurout {
+    from {
+        filter: blur(1200px);
+    }
 }
 
 @font-face {
@@ -122,7 +126,7 @@ body {
     user-select: none;
 }
 
-#close:hover{
+#close:hover {
     background-color: red;
 }
 
@@ -190,7 +194,7 @@ body {
     color: rgb(247, 240, 231);
 }
 
-.navbutt:nth-child(1){
+.navbutt:nth-child(1) {
     background-color: black;
     /* color: white; */
     color: rgb(247, 240, 231);
@@ -337,12 +341,8 @@ section a {
 }
 
 section a:hover .imageNews {
-    filter:invert(0.8);
+    filter: invert(0.8);
 }
-
-/* section #big1:hover {
-    filter: invert(1);
-} */
 
 .imageNews .proTags {
     position: absolute;
@@ -383,9 +383,9 @@ section a:hover .imageNews {
     width: 100%;
     color: aliceblue;
     overflow: hidden;
-    display: -webkit-box; 
-    -webkit-box-orient: vertical; 
-    -webkit-line-clamp: 2; 
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
     /* white-space: nowrap; */
     text-overflow: ellipsis;
 }
@@ -457,7 +457,7 @@ article .selectors:hover {
     user-select: none;
 }
 
-article .active{
+article .active {
     background-color: rgb(53, 53, 53);
     color: antiquewhite;
     user-select: none;
@@ -506,9 +506,9 @@ article .containerDiv .art .titlesmall {
     height: 4.5vw;
     color: black;
     overflow: hidden;
-    display: -webkit-box; 
-    -webkit-box-orient: vertical; 
-    -webkit-line-clamp: 3; 
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
     /* white-space: nowrap; */
     text-overflow: ellipsis;
 }
@@ -541,9 +541,13 @@ article .containerDiv a {
     text-decoration: none;
 }
 
-/* article .active{
-
-} */
+article .containerDiv {
+    overflow-y: auto;
+    overflow-x: hidden;
+    height: 28vw;
+    float: left;
+    width: 28vw;
+}
 
 @media screen and (max-width:900px) {
     .navbutt {
@@ -553,6 +557,10 @@ article .containerDiv a {
 
 @media screen and (max-width:600px) {
     #breaking {
+        display: none;
+    }
+
+    article .selectors {
         display: none;
     }
 
@@ -600,7 +608,7 @@ article .containerDiv a {
     }
 
     article .containerDiv {
-        float: none;
+        float: right;
         width: 100vw;
         height: auto;
         display: block;
