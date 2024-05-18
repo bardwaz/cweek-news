@@ -165,7 +165,7 @@ section {
 
 section .imageNews {
     font-family: apple-font;
-    display: block;
+    display: none;
     float: left;
     border-radius: 10px;
     width: 10vw;
@@ -182,25 +182,25 @@ section .imageNews {
 section #big1 {
     width: 31vw;
     height: 31vw;
-    background-image: url("images/sampleimage1.jpg");
+    /* background-image: url("images/sampleimage1.jpg"); */
 }
 
 section #big2 {
     width: 16vw;
     height: 31vw;
-    background-image: url("images/sampleimage5.jpg");
+    /* background-image: url("images/sampleimage5.jpg"); */
 }
 
 section #big3 {
     width: 15vw;
     height: 14.5vw;
-    background-image: url("images/sampleimage3.jpg");
+    /* background-image: url("images/sampleimage3.jpg"); */
 }
 
 section #big4 {
     width: 15vw;
     height: 14.5vw;
-    background-image: url("images/sampleimage4.jpg");
+    /* background-image: url("images/sampleimage4.jpg"); */
 }
 
 section a {
@@ -208,12 +208,12 @@ section a {
 }
 
 section a:hover .imageNews {
-    filter: brightness(1.1);
+    filter:invert(0.8);
 }
 
-section #big1:hover {
+/* section #big1:hover {
     filter: invert(1);
-}
+} */
 
 .imageNews .proTags {
     position: absolute;
@@ -350,7 +350,6 @@ article .containerDiv .art .imagesmall {
     height: 6vw;
     border-radius: 10px;
     /* background-color: aqua; */
-    background-image: url("images/sampleimage.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
